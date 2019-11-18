@@ -35,6 +35,8 @@ if ! test -e ${TASKDDATA}/config; then
   # And finaly set taskd to listen in default port
   taskd config --force server 0.0.0.0:53589
 
+  chmod -R 600 ${TASKDDATA}/pki/*.pem
+
 fi
 
 # Exec CMD or taskd by default if nothing present

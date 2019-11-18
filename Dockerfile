@@ -1,5 +1,5 @@
 FROM alpine:latest
-MAINTAINER Andreas Rammhold (andreas@rammhold.de)
+MAINTAINER Derek Slenk (derek.slenk@gmail.com)
 
 # Install necessary stuff
 RUN apk -U --no-progress upgrade && \

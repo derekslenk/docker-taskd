@@ -11,7 +11,7 @@ efficient, and unobtrusive. It does its job then gets out of your way.
 This docker packages **taskd**, Taskwarrior sync server, under [Alpine
 Linux](https://alpinelinux.org/), a lightweight Linux distribution.
 
-Visit [Docker Hub](https://hub.docker.com/r/ogarcia/taskd/) to see all
+Visit [Docker Hub](https://hub.docker.com/r/slenk/taskd/) to see all
 available tags.
 
 ## Run
@@ -24,7 +24,7 @@ docker run -d \
   --name=taskd \
   -p 53589:53589 \
   -v /srv/taskd:/var/taskd \
-  andir/taskd
+  slenk/taskd
 ```
 
 This makes a set of self signed certificates and minimal configuration to
@@ -40,7 +40,7 @@ docker run -d \
   -p 53589:53589 \
   -v /srv/taskd:/var/taskd \
   -h <hostname>
-  andir/taskd
+  slenk/taskd
 ```
 
 Where `<hostname>` is the domain how the remote server can be reached.
@@ -74,7 +74,7 @@ docker in interactive mode, simply do.
 ```sh
 docker run -ti --rm \
   -v /srv/taskd:/var/taskd \
-  ogarcia/taskd /bin/sh
+  slenk/taskd /bin/sh
 ```
 
 This mounts the permanent data volume `/srv/taskd` into **taskd** data
