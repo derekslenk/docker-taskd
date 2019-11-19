@@ -30,9 +30,9 @@ docker run -d \
 This makes a set of self signed certificates and minimal configuration to
 run server.
 
-### Run on remote server
+### Run as a publicly accessibly server
 
-To run this container on a remote server, simply run
+To run this container as a remote server, simply run
 
 ```sh
 docker run -d \
@@ -43,7 +43,7 @@ docker run -d \
   slenk/taskd
 ```
 
-Where `<hostname>` is the domain how the remote server can be reached.
+Where `<hostname>` is the domain how the remote server can be reached. eg: subdomain.slenk.com
 
 ## Manual setup
 

@@ -8,6 +8,14 @@
 
 # If no config file found, do initial config
 if ! test -e ${TASKDDATA}/config; then
+  #Set the hostname for proper certificate generation
+
+  # if $hostname is blank set to localhost
+  if [ -z ${HOSTNAME:-localhost}
+  echo $HOSTNAME > /etc/hostname
+
+  #activate the new hostname
+  hostname -F /etc/hostname
 
   # Create directories for log and certs
   mkdir -p ${TASKDDATA}/log ${TASKDDATA}/pki
